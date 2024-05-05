@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vandana Sinha Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #28B463;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+  top:-23px;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vandana Sinha</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+			  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/mainimage.png); background-size: contain;  background-repeat: no-repeat; width: 400px; height:200 px;border-radius: 50%">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vandana Sinha</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Product Manager  ',
+						'Senior Data Scientist  ',
+						'Senior Machine Learning Engineer   ',
+						'AI Lead Engineer   ',
+						'Lead Data Analyst   ',
+						'Lead Business Intelligence Analyst  ',
+						'Lead Data Architect  '
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<!-- <br>
+						<br> -->
+			            <h2 style="margin-top: -21px;"> Senior Data Scientist </h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/vandana-sinha-246925149/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+						<!-- <a href="https://public.tableau.com/app/profile/pragati.divekar6017/vizzes" class="btn btn-white btn-outline-white py-3 px-4">Tableau</a>  -->
+						<a href="https://github.com/vandanasnh" class="btn btn-white btn-outline-white py-3 px-4">Github</a>
+						</p>
+						<div class="container">
+			<br>
+			<br>
+	
+		<!--				
+							<ul class="ftco-footer-social list-unstyled d-flex justify-content-left align-items-left mb-0">
+							<li class="ftco-animate normal-txt"><span>Find me on</span></li>
+							
+							<!--<li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
+							<li class="ftco-animate"><a href="https://www.linkedin.com/in/pragati-divekar/"><span class="icon-linkedin"></span></a></li>
+							</ul>-->
+	
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section style="padding: 0;" class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<!-- <div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/mainimage.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div> -->
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s fontcolor-white"><b>Name: </b></span> <span>Vandana Sinha</span></p>
+										<p><span class="title-s fontcolor-white"><b>Interested Roles:</b> </span> <span> Product Manager |
+											Senior Data Scientist |
+											Senior Machine Learning Engineer |
+											AI Lead Engineer |
+											Lead Data Analyst |
+											Lead Business Intelligence Analyst |
+											Lead Data Architect</span></p>
+										<p><span class="title-s fontcolor-white"><b>Experience:</b> </span> <span>8+ Years FullTime (India) & 20 Months Research (United States)</span></p>
+										<p><span class="title-s fontcolor-white"><b>Address: </b></span> <span> Hillsboro, United States</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<i class="fa-solid fa-chart-column text-light h4 mr-2"></i><span>Data Visualization</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<i class="fa-brands fa-python text-light h4 mr-2"></i><span>PYTHON</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<i class="fa-solid fa-database text-light h4 mr-2"></i><span>SQL</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									 
+									<i class="fa-solid fa-chart-line text-light h4 mr-2"></i><span>Statistical Analysis</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<i class="fa-solid fa-cloud text-light h4 mr-2"></i><span>Cloud</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<i class="fa-solid fa-trowel-bricks text-light h4 mr-2"></i><span>BI TOOL</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<i class="fa-solid fa-brain text-light h4 mr-2"></i><span>AI/ML</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<i class="fa-solid fa-trowel-bricks text-light h4 mr-2"></i><span>ETL TOOL</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<i class="fa-solid fa-people-group text-light h4 mr-2"></i><span>Digital Marketing</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4" style="font-family:cursive;">About Me</h2>
+								
+								<p style="text-align:justify;">I'm Vandana Sinha, a passionate data strategist with a knack for transforming raw information into actionable insights. Backed by a strong foundation in computer science (M.Sc) and diverse industry experience (Lead Solution Architect, Senior Quantitative Analyst, etc.), I bridge the gap between data and decision-making.
+
+									<p class="fontcolor-white">Turning Insights into Impact</p>
+									
+									My expertise lies in data-driven decision making, AI/ML techniques, and predictive analytics. I leverage these skills to uncover hidden patterns and translate them into clear, compelling visualizations. This empowers all levels of an organization - from executives to frontline staff - to make informed choices.
+									
+									<p class="fontcolor-white">Collaboration is Key</p>
+									
+									I thrive in collaborative environments, seamlessly integrating with cross-functional teams. Together, we translate business needs into data-driven solutions that optimize processes, refine marketing efforts, and fuel innovation.
+									
+									<p class="fontcolor-white">Ready to Unlock Your Data Potential?</p>
+									
+									Let's embark on a journey of data-driven transformation. Together, we can unlock the true value of your data assets, inspiring action, and propelling your organization forward.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span> Data Scientist  &amp; Analytics </span></li>
+									<li class="d-flex"><span>Domain:</span> <span> Data Science (Banking ,Healthcare, Digital Marketing, Technology, and Education)</span></li>
+									<li class="d-flex"><span>Education:</span> <span>• Master of Science in Computer Engineering (University of North Texas, May 2023) - Highlighted due to recent completion
+																				<br>• Master of Science in Information Science (Birla Institute of Technology, May 2007)</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Google Analytics, Adobe Analytics & Excel</span></li>
+									<li class="d-flex"><span>Machine Learning: </span> <span>Linear regression, Data analysis, Clustering, SVM, Logistic regression, Random Forest, Predictive modeling, Time series forecasting, Statistical modeling, Hypothesis testing, Data modeling	</span></li>
+									<li class="d-flex"><span style="width: 230px;">Data Reporting: </span>SAP BO, Power BI, Tableau, Google Data Studio <span> </span></li>
+									<li class="d-flex"><span>Databases:</span> <span>Microsoft SQL Server, Oracle 11g, MySQL </span></li>
+									<li class="d-flex"><span>Programing:</span> <span>Python (Pandas, SciPy, NumPy, Scikit-learn, Keras, Stats Model, Matplotlib, TensorFlow, PyTorch, Flask), Git, R</span></li>
+									<li class="d-flex"><span>Data Reporting: </span> <span>Confluence, Microsoft Office, JIRA, Jupyter, RStudio, Google Cloud Platform (GCP), AWS, Snowflake, Google
+										Analytics, Google BigQuery, Spark, Agile
+										</span></li>
+									<li class="d-flex"><span>Certifications:</span><span> Google Data Analytics, Generative AI Fundamentals Skill Badge, IBM Data Science Professional, Project Management Professional (PMP)</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ 
+
+
+
+    	<div class="container" id="resume-section">
+    		<div class="row justify-content-center pb-5">
+		<div class="col-md-10 heading-section text-center ftco-animate">
+			<h1 class="big big-2">Resume</h1>
+			<h2 class="mb-4">Resume</h2>
+			<p>Experienced Data Scientist skilled in advanced analytics and machine learning to solve complex business problems and improve customer experiences. Proficient in Python, R, SQL, and Data Reporting tools like SAP BO and Power BI. Expertise in large-scale marketing data for segmentation, optimization, and campaign performance analysis.</p>
+			
+		</div>
+		  <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p>
+					<a href="Vandana datascientist.pdf" class="btn btn-primary py-3 px-4" target="_blank">Download Resume <i class="fa fa-download"></i></a></p>
+    			</div>
+    		</div>
+        </div>
+
+		<div class="row" id="experience-section">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br >
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2022-Dec 2022</span>
+						<h2>Solution Architect Intern</h2>
+						<span class="position">Intel | United States</span>
+						<p class="mt-4">
+							<ul>
+								<li>Implemented advanced data modeling techniques (linear regression, decision trees) and quantitative analysis using Python libraries (Scikit-learn, NumPy), enhancing customer satisfaction by 5% and solution performance by 3% through deep insights into customer behavior improving engagement and retention.</li>
+								<li>Spearheaded integration of cutting-edge AI technologies like deep learning (CNNs, RNNs) and transformers (BERT, GPT) into hardware platforms, boosting Xeon product loyalty by 1% and customer engagement by 2% by aligning cross-functional strategies via TensorFlow and Pytorch frameworks.</li>
+								<li>Orchestrated collaborative problem-solving across teams applying data-driven decision-making techniques (hypothesis testing with SciPy, A/B testing with Stats Models) to address challenges with tailored solutions, reducing grievances by 4% and elevating solution efficacy by 5%.</li>
+								<li>Recognized for exceptional problem-solving capabilities by pioneering new process leveraging object detection (YOLO, Faster R-CNN) and NLP (spaCy, NLTK) reducing customer complaints by 20%.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Sep 2017- Aug 2021</span>
+						<h2>Senior Quantitative Analyst </h2>
+						<span class="position">Crisil | NewYork </span>
+						<p class="mt-4">
+							<ul>
+								<li>Engineered advanced data models using Python (Scikit-learn, XGBoost), SQL, and R for transaction monitoring, leveraging ensemble techniques (Random Forests, Gradient Boosting) to detect fraudulent activities, reducing incidents by 2% within 8 months through quantitative analysis.</li>
+								<li>Developed data-driven algorithmic trading strategies by applying time series forecasting methods (ARIMA, Prophet) in StatsModels and Neural Prophet, driving 5% profit increase by adapting predictive analytics to market dynamics and influencing business strategy.</li>
+								<li>Optimized financial forecasting accuracy by 8% through statistical modeling using regression analysis (linear, logistic) in Scikit-learn to identify market trends and risks, enabling strategic planning and adjustments.</li>
+								<li>Architected marketing mix models by synthesizing diagnostic insights from exploratory data analysis, predictive modeling (regression, clustering), and prescriptive analytics using operations research for data-driven decision making and solution shaping.</li>
+								<li>Cleaned 10 GB of unstructured financial data to eliminate campaigns based on spending patterns with expenditure above 15% and reach less than 10% using Python and Excel (pivot, VLOOKUP)</li>
+								<li>Built SQL scripts using BigQuery (GCP) to create views and reports for in-depth analysis, increasing productivity by 18%</li>
+								<li>Created logistic regression, tree-based ensemble models, XGboost, and neural network to forecast churn using customer insights</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun 2023 - Present</span>
+						<h2>Data Science Research Assistant</h2>
+						<span class="position">San Jose University | United States</span>
+						<p class="mt-4">
+							<ul>
+								<li>Architected high-performance federated learning framework using PySyft and TensorFlow Federated for privacy-preserving medical data analysis, processing 10x more data per second than existing solutions.</li>
+								<li>Developed state-of-the-art generative AI models for text synthesis using transformer architectures (GPT-3, BERT) and diffusion models (Stable Diffusion, DALL-E) along with neural rendering techniques for image generation.</li>
+								<li>Implemented bias mitigation algorithms (Adversarial Debiasing, Calibrated Multiclass Predictions) and trustworthy AI techniques to improve fairness, safety and responsibility while reducing harmful outputs.</li>
+								<li>Spearheaded user studies leveraging human-computer interaction principles to evaluate real-world impact and utility of developed AI solutions.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jun 2023 - Present</span>
+						<h2>Teaching Assistant </h2>
+						<span class="position">University of North Texas | United States</span>
+						<p class="mt-4">
+							<ul>
+								<li>Optimized data-driven education models through regression techniques (linear, logistic) and clustering algorithms (K-Means, DBSCAN) in Scikit-learn, enhancing student satisfaction by 2% and assignment performance by 4%. </li>
+								<li>Leveraged statistical analysis using SciPy and Pandas to devise personalized tutoring programs based on student patterns, decreasing failing grades by 2% and improving retention by 1%. </li>
+								<li>Pioneered adoption of gamification using Reinforcement Learning (Q-Learning) and flipped classroom techniques powered by interactive Jupyter notebooks, boosting engagement by 2% and exam scores by 6%.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2011 - Aug 2017</span>
+						<h2>Data Warehouse & Digital Marketing Analyst </h2>
+						<span class="position">V360Group | India </span>
+						<p class="mt-4">
+							<ul>
+								<li>Executed data cleansing and wrangling techniques in Informatica PowerCenter ETL tool, improving data quality by 6% and translating complex datasets into actionable insights for data-driven decision making.</li>
+								<li>Optimized digital marketing campaigns leveraging statistical methods (A/B testing using Python stats models) and machine learning models (logistic regression in Scikit-learn) for strategic targeting and budget allocation, boosting click-through rates by 5% and ad efficiency by 2%.</li>
+								<li>Engineered automated reporting dashboards and visualizations in BI tools like Tableau, enhancing data accessibility by 10% and enabling real-time tracking of critical KPIs.</li>
+								<li>Orchestrated cross-functional reporting by consolidating diverse stakeholder insights, guiding hypothesis formulation using statistical tests (t-tests, ANOVA) and validating performance optimization strategies through research.</li>
+								<li>Mentored and upskilled junior data scientists on data wrangling using Pandas, programming in Python, and deploying machine learning models, increasing project efficiency by 7% and data quality metrics by 5%.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2007 - Jul 2011</span>
+						<h2>Data Engineer </h2>
+						<span class="position">Hewlett Packard | India </span>
+						<p class="mt-4">
+							<ul>
+								<li>Streamlined real-time issue resolution for order processing by architecting data mapping strategies using Unix shell scripting, Informatica PowerCenter ETL workflows, and Oracle SQL/PLSQL, meeting stringent deadlines.</li>
+								<li>Engineered an innovative inventory optimization algorithm by leveraging advanced programming techniques in Java and Python, resulting in 7% improvement in system performance over 6 months.</li>
+								<li>Orchestrated integration of Informatica PowerCenter ETL tools into enterprise data warehouse, performing data profiling, cleansing, and loading of partner sales and inventory data within 6 weeks, reducing downtime and boosting efficiency.</li>
+								<li>Recognized as a pivotal contributor for spearheading development and automation initiatives through Unix shell scripting for job scheduling and Java for application development, increasing HP's market share by 10%.</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row" id="education-section">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Graduation Date – May 2023</span>
+    					<h2>Master of Science in Computer Engineering </h2>
+    					<span class="position">University of North Texas Denton – Texas, United States</span>
+    					<p class="mt-4">GPA: 4.0/4.0</p>
+						<p ><b class="fontcolor-white">Coursework :</b> Deep Learning, Big Data, Neural Networks, Natural Language Processing, Computer algorithm</p>
+    				</div>
+				</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Graduation Date – May 2007</span>
+    					<h2>Master of Science in Information Science</h2>
+						
+    					<span class="position">Birla Institute of Technology, Mesra, India</span>
+    					<p ><b class="fontcolor-white">Coursework :</b> Artificial Intelligence, Data Structures & Algorithms, Computer Networks, MatLab, DBMS</p>
+    				</div>
+    			</div>   			
+    		</div>
+
+    	<br>
+		
+    	</div>
+	
+
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-10 pb-10">
+			  <div class="col-md-7 heading-section text-center ftco-animate">
+				<h1 class="big big-2">Projects</h1>
+				
+				<h2 class="mb-10">Projects</h2>
+				<div class="underline"></div>
+				<p>Below are data analytics projects briefly describing the technology stack used to solve cases.</p>
+			  </div>
+			</div>
+		
+		
+			<div class="container">
+				<!-- <div class="row justify-content-Left mb-10 pb-10">
+					<div class="col-md-7 heading-section text-Left ftco-animate">
+						<h2 class="mb-4">Data Visualization </h2>
+						<p>Below are data analytics projects developed using Tableau.</p>
+						<p>Steps: data loading, data cleaning and preprocessing, and EDA (exploratory data analysis) & building Tableau Dashboard.</p>
+						<p>Skills: Calculated fields, LOD operations</p>
+					</div>
+				</div> -->
+       
+				
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/vandanasnh/sentiment_analysis_BERT" class="block-20 zoom-effect" style="background-image: url('images/projectimage5.jpeg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/vandanasnh/sentiment_analysis_BERT">Sentiment Analysis using Deep Learning</a></h3>
+								<p>This project fine-tunes the mighty BERT model for sentiment analysis.</p>
+								<p class="fontcolor-white">It transforms customer reviews (positive or negative) into actionable insights using:</p>
+								<ul style="padding-left: 15px;">
+									<li><p>Pre-trained Power: Leverages a pre-trained BERT model to understand the sentiment behind the words.</p></li>
+									<li><p>Customizable Architecture: Builds a neural network classifier on top of BERT, allowing you to tailor it to your specific needs.</p></li>
+									<li><p>Clear Evaluation: Tracks training and validation accuracy to ensure optimal performance.</p></li>
+									<li><p>Ready to unlock the power of customer sentiment? This project provides a clear roadmap and is easily adaptable for various use cases.</p></li>
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/vandanasnh/Brain-Tumor-Detection-ML" class="block-20 zoom-effect" style="background-image: url('images/projectimage1.PNG');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/vandanasnh/Brain-Tumor-Detection-ML">Brain Tumor Detection with Machine Learning</a></h3>
+								<ul style="padding-left: 15px;">
+									<li><p><b class="fontcolor-white">The Challenge :</b> Detecting brain tumors early is critical for successful treatment. But traditional methods can be time-consuming and prone to human error.</p></li>
+									<li><p><b class="fontcolor-white">Our Weapon :</b> A powerful AI model built with TensorFlow & Keras. It analyzes MRI images to identify brain tumors with 88.7% accuracy.</p></li>
+									<li><p><b class="fontcolor-white">The Advantage :</b> Faster, more accurate diagnoses that could save lives.</p></li>
+								</ul>
+								<p class="fontcolor-white">How We Did It:</p>
+								<ul style="padding-left: 15px;">
+									<li><p><b class="fontcolor-white">Data Warriors : </b> We used data augmentation to squeeze more training data from existing images, making our AI model stronger.</p></li>
+									<li><p><b class="fontcolor-white">Right-Sized Approach :</b> We explored complex models, but they were too much for our hardware. Our custom model delivers high accuracy without overloading the system.</p></li>
+									<li><p><b class="fontcolor-white">Join the Fight :</b> This open-source project provides code, pre-trained models, and data. Together, let's leverage AI to revolutionize brain tumor detection!</p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/vandanasnh/Meal-Planning-Shopping-List" class="block-20 zoom-effect" style="background-image: url('images/projectimage4.jpeg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/vandanasnh/Meal-Planning-Shopping-List">Meal Planning Shopping List App</a></h3>
+								<ul style="padding-left: 15px;">
+									<li><p><b class="fontcolor-white">Groceries :</b> Plan Your Meals, Conquer Your Shopping Tired of scrambling for recipes and last-minute grocery trips? Groceries takes the hassle out of meal planning!</p></li>
+								</ul>
+								<p class="fontcolor-white">This web app lets you :</p>
+								<ul style="padding-left: 15px;">
+									<li><p>Plan your meals for the week: Schedule meals for each day, skipping days as needed.</p></li>
+									<li><p>Discover delicious recipes: Browse by category or filter by dietary preferences (vegetarian, gluten-free, etc.).</p></li>
+									<li><p>Automatically generate shopping lists: Ingredients from planned meals are automatically added to your list, adjusted for servings.</p></li>
+									<li><p>Manage your pantry: Mark staples as "pantry items" to avoid overbuying.</p></li>
+									<li><p>Say goodbye to mealtime stress and hello to a well-stocked fridge!</p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/vandanasnh/CPU-Scheduling-Algorithm-Simulation" class="block-20 zoom-effect" style="background-image: url('images/projectimage3.jpeg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/vandanasnh/CPU-Scheduling-Algorithm-Simulation">CPU Scheduling Algorithm Simulation</a></h3>
+								<p>CPU Scheduling Algorithm Simulation
+									Dive deep into CPU scheduling algorithms with this interactive simulator. Experiment with popular algorithms like FCFS, SJF, RR, and MLFQ. Analyze detailed logs to understand their impact on throughput, wait times, and resource utilization.
+									</p>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://public.tableau.com/app/profile/pragati.divekar6017/viz/TechCompanyLayoffsUnitedStates/Layoffs2023" class="block-20 zoom-effect" style="background-image: url('images/layoffs.jpeg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://public.tableau.com/app/profile/pragati.divekar6017/viz/TechCompanyLayoffsUnitedStates/Layoffs2023">Tech Company Layoffs: United States</a></h3>
+								<p>Showcased insights of recent layoffs happened in Big Tech Companys in United States..</p>
+								<p>Description: The dataset contains records of Layoffs by Month,sectors,industry and location.</p>
+							
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<!-- <p>Below are data analytics projects developed using Power BI.</p> -->
+				<!-- <div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/pragatidivekar/Amazon-Prime-Movies-TV-Shows/blob/main/Amazon%20PRime%20Movies%20%26%20TV%20Shows.png" class="block-20 zoom-effect" style="background-image: url('images/Prime video logo.png');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/pragatidivekar/Amazon-Prime-Movies-TV-Shows/blob/main/Amazon%20PRime%20Movies%20%26%20TV%20Shows.png">Amazon Prime Movies & TV Shows Analysis</a></h3>
+								<p>The Amazon Prime Movies and TV Shows Power BI project aims to analyze and visualize key metrics, including total shows by country, release date, genre, and rating.</p>
+								<p>Description: The dataset contains records of showid, name, director, cast, country, release date, rating and genre. </p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/pragatidivekar/Airbnb-/blob/main/Airbnb.pdf" class="block-20 zoom-effect" style="background-image: url('images/airbnb.webp');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/pragatidivekar/Airbnb-/blob/main/Airbnb.pdf">Airbnb Insights</a></h3>
+								<p>Delve into our comprehensive Airbnb dataset analysis,exploring key metrics such as Average Reviews Per Month,Room Types,total bookings, average prices, top hosts, and average prices by neighborhood and room type.</p>
+								<p>Description: The dataset contains records of Host details,Region,Price,Neighbourhood & Number of Reviews. </p>
+								
+							</div>
+						</div>
+					</div>
+				
+				<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/pragatidivekar/Maven_Market_PowerBI/blob/main/Maven_Market_Report.pdf" class="block-20 zoom-effect" style="background-image: url('images/maven.png');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/pragatidivekar/Maven_Market_PowerBI/blob/main/Maven_Market_Report.pdf">Maven Market</a></h3>
+								<p>Maven Market's Power BI project facilitated comprehensive analysis of sales data, driving informed decision-making and enhancing business performance.</p>
+								<p>Description: The dataset contains records of Product details , Sales transactions, Geographic data and Customer information. </p>
+								
+							</div>
+						</div>
+					</div>
+			</div> -->
+			</div>
+			<!-- <div class="container">
+					<div class="row justify-content-Left mb-10 pb-10">
+						<div class="col-md-7 heading-section text-Left ftco-animate">
+							<h2 class="mb-4">Python </h2>
+							<p>Below are data analytics projects developed using Python.</p>
+							<p>Skills: data cleaning, data analysis, data visualization.</p>
+							<p>Technology: Python,Jupyter Notebook,Pandas,Seaborn,Matplotlib</p>
+						</div>
+					</div>
+		   
+					
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/pragatidivekar/Diwali-Shopping-Analysis/blob/main/Diwali_shopping_analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/Diwali.png');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a href="https://github.com/pragatidivekar/Diwali-Shopping-Analysis/blob/main/Diwali_shopping_analysis.ipynb">Diwali Shopping Analysis</a></h3>
+								<p>Unlocking the secrets of Diwali shopping through Python analysis,delving deep into data to see the consumer behavior </p>
+								<p>Description: The dataset contains records of gender, age group, state,product category,marriatal status and profession.</p>
+								
+							</div>
+						</div>
+					</div>
+					
+			</div>
+		</div> -->
+			<!-- <div class="container">
+				<div class="row justify-content-Left mb-5 pb-5">
+					<div class="col-md-7 heading-section text-Left ftco-animate">
+						<h2 class="mb-4">SQL </h2>
+						<p>Below are SQL projects for data querying and analysis.</p>
+						<p>Skills: MySQL, MS SQL Server, Pgadmin4</p>
+					</div>
+					
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://github.com/pragatidivekar/Pizza-Sale-/blob/main/SQL" class="block-20 zoom-effect" style="background-image: url('images/pizza.jpeg');">
+							</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/pragatidivekar/Pizza-Sale-/blob/main/SQL">Pizza Sales Analysis</a></h3>
+							<p>Analyzed Pizza Sales data by running PostgreSQL queries in Pgadmin4 to identify Pizza sales KPIs, (Daily,monthly & quarterly ) orders , Pizza sales by category & size</p>
+							<p>Description: The dataset contains records of Pizza name,size,category,revenue,order date & price.</p>
+							
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+
+
+
+
+	</section>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+			<h3>Recognition & Awards</h3>
+				<div class="d-flex flex-column">
+					<div class="d-flex flex-row align-items-center award-wrapper m-4">
+						<i class="fa-solid fa-medal"></i>
+						<div class="d-flex flex-column align-items-start ml-4">
+							<h5 class="text-left">Intel Corporation</h5>
+							<p class="text-left">Slashed customer complaints by 20% through innovative problem-solving, resulting in selection for Intel's prestigious Incubation Program.</p>
+						</div>
+					</div>
+					<div class="d-flex flex-row align-items-center award-wrapper m-4">
+						<i class="fa-solid fa-medal"></i>
+						<div class="d-flex flex-column align-items-start ml-4">
+							<h5 class="text-left">CRISIL Global Research:</h5>
+							<p class="text-left">Awarded prestigious Star and CLAP awards for driving a 15% uplift in customer satisfaction.  </p>
+						</div>
+					</div>
+					<div class="d-flex flex-row align-items-center award-wrapper m-4">
+						<i class="fa-solid fa-medal"></i>
+						<div class="d-flex flex-column align-items-start ml-4">
+							<h5 class="text-left">Freelance Work:</h5>
+							<p class="text-left">Spearheaded training and development of junior data scientists, resulting in a 7% increase in project efficiency and 5% improvement in data quality metrics, which earned a well-deserved promotion.  </p>
+						</div>
+					</div>
+					<div class="d-flex flex-row align-items-center award-wrapper m-4">
+						<i class="fa-solid fa-medal"></i>
+						<div class="d-flex flex-column align-items-start ml-4">
+							<h5 class="text-left">Hewlett Packard:</h5>
+							<p class="text-left">Received widespread acclaim for pivotal contributions to development and automation efforts, boosting market share by an impressive 10%.  </p>
+						</div>
+					</div>
+					<div class="d-flex flex-row align-items-center award-wrapper m-4">
+						<i class="fa-solid fa-medal"></i>
+						<div class="d-flex flex-column align-items-start ml-4">
+							<h5 class="text-left">University of North Texas:</h5>
+							<p class="text-left">Achieved membership in The Honor Society of Phi Kappa Phi, a distinction reserved for the top 10% of academics.  </p>
+						</div>
+					</div>
+
+				</div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/vandanasnh" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section" >
+      <div class="container center">
+      	<div class="row justify-content-center mb-6 pb-4">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4 ">Contact Me</h2>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5 text-center">
+          <div class="col-md-6 col-lg-3 d-flex text-center ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Hillsboro, United States</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">(971)371-8926 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="vandanasinha7@gmail.com">vandanasinha7@gmail.com</a></p>
+	          </div>
+          </div>
+          
+
+		 
+   </div>
+ </section>
+
+
+ 
+
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/5d270178a0.js" crossorigin="anonymous"></script>
+  </body>
+</html>
